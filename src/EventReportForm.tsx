@@ -59,59 +59,6 @@ function EventReportForm(props: { showReport: () => void }) {
 
     function onSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
-
-        // // A4サイズで新しいPDFドキュメントを作成、単位をmmに設定
-        // const pdf = new jsPDF({
-        //     orientation: 'portrait',  // 縦向き
-        //     unit: 'mm',
-        //     format: 'a4'
-        // });
-
-        // // マージンの設定
-        // const margins = { top: 20, left: 20, right: 20, bottom: 20 };
-
-        // // ヘッダー
-        // pdf.setFontSize(16);
-        // pdf.setFont('helvetica', 'bold');
-        // pdf.text('PTA報告書', 105, margins.top, { align: 'center' });  // 中央揃え
-
-        // // イベント名
-        // pdf.setFontSize(14);
-        // pdf.setFont('helvetica', 'normal');
-        // pdf.text(`イベント名: ${eventName}`, margins.left, margins.top + 20);
-
-        // // 作成者氏名
-        // pdf.setFontSize(12);
-        // pdf.text(`作成者氏名: ${familyName} ${givenName}`, margins.left, margins.top + 30);
-
-        // // イベント参加年月日
-        // pdf.text(`イベント参加年月日: ${year}年${month}月${day}日`, margins.left, margins.top + 40);
-
-        // // イベントの内容
-        // pdf.setFontSize(12);
-        // pdf.setFont('helvetica', 'bold');
-        // pdf.text('イベントの内容:', margins.left, margins.top + 50);
-        // pdf.setFont('helvetica', 'normal');
-        // pdf.text(eventContent, margins.left, margins.top + 55, { maxWidth: 170 });
-
-        // // イベントに参加した感想
-        // pdf.setFontSize(12);
-        // pdf.setFont('helvetica', 'bold');
-        // pdf.text('イベントに参加した感想:', margins.left, margins.top + 90);
-        // pdf.setFont('helvetica', 'normal');
-        // pdf.text(impressions, margins.left, margins.top + 95, { maxWidth: 170 });
-
-        // // 追加項目（オプション）
-        // if (additionalHeading) {
-        //     pdf.setFontSize(12);
-        //     pdf.setFont('helvetica', 'bold');
-        //     pdf.text(`${additionalHeading}:`, margins.left, margins.top + 130);
-        //     pdf.setFont('helvetica', 'normal');
-        //     pdf.text(additionalText, margins.left, margins.top + 135, { maxWidth: 170 });
-        // }
-
-        // // PDFを保存
-        // pdf.save('pta_report.pdf');
         showReport();
     }
 
