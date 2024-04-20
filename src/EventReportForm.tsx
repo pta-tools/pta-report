@@ -2,6 +2,7 @@ import { Box, Button, FormControl, FormLabel, Heading, Input, Select, Text, Text
 import { useEffect } from "react";
 import { useRevalidator } from "react-router-dom";
 import eventReportStore from "./EventReportStore";
+import downloadPDF from "./makePDF";
 
 const now = new Date();
 
@@ -19,7 +20,8 @@ function FieldSet(props: { caption: string, helperText?: string, children: React
 }
 
 function EventReportForm(props: { showReport: () => void }) {
-    const { showReport } = props;
+    // const { showReport } = props;
+    const {} = props;
 
     const eventName = eventReportStore.valueSubject.value.eventName;
     const familyName = eventReportStore.valueSubject.value.familyName;
@@ -59,7 +61,8 @@ function EventReportForm(props: { showReport: () => void }) {
 
     function onSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
-        showReport();
+        // showReport();
+        downloadPDF(eventReportStore.valueSubject.value);
     }
 
     useEffect(() => {
