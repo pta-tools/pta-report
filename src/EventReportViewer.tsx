@@ -1,7 +1,6 @@
 import { Box, Button, HStack, Heading, Spacer, Text, VStack } from "@chakra-ui/react";
-import jsPDF from "jspdf";
-import eventReportStore from "./EventReportStore";
 import { useNavigate } from "react-router-dom";
+import eventReportStore from "./EventReportStore";
 import downloadPDF from "./makePDF";
 
 function EventReportViewer() {
