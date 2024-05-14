@@ -21,7 +21,7 @@ function downloadPDF(report: EventReport) {
         format: "a4"
     });
 
-    doc.addFont("/fonts/NotoSansJP-Regular.ttf", "NotoSansJP", "normal");
+    doc.addFont("/pta-report/fonts/NotoSansJP-Regular.ttf", "NotoSansJP", "normal");
     doc.setFont("NotoSansJP");
 
     // タイトル
