@@ -7,8 +7,12 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <PageBase><EventReportMaker /></PageBase>,
-    }
-]);
+    },
+],
+    {
+        basename: '/pta-report',
+    },
+);
 
 function App() {
     return (
